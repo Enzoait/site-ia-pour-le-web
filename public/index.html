@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="welcome-container">
+            <h1>Modèle MNIST</h1>
+            <p>Utilisez le canva ci-dessous pour dessiner un chiffre.<br> Une fois terminé cliquez sur "Soumettre".<br><strong>N'hésitez pas a prendre tout l'espace disponible dans le canva. Le modèle est très sensible (plus le dessin est gros, plus le modèle arrivera a prédire le bon nombre).</strong></strong></p>
+            <canvas id="drawing-canvas" width="280" height="280" style="border:1px solid #000; background:black;"></canvas>
+        </div>
+        <button id="clear-button">Effacer</button>
+        <button id="submit-button">Soumettre</button>
+        <p id="result"></p>
+        <h3>Important</h3>
+        <p>Le modèle arrive mieux a prédire certains nombres en fonction de la facon dont ils sont dessinés.</p>
+        <h4>Exemple :</h4>
+        <img src="exemple1.png" alt="Exemple 1" width="300px" height="300px">
+        <img src="exemple2.png" alt="exemple2" width="300px" height="300px">
+    </div>
+    <script type="module">
+        import './app.js';
+        import './draw.js';
+    </script>
+</body>
+</html>
